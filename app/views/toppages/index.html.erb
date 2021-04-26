@@ -1,3 +1,7 @@
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% else %>
+
 <section id="top">
   <div class="jumbotron text-center">
       <div class="container">
@@ -100,6 +104,7 @@
 <a class="btn btn-primary btn-lg" href="#" role="button">もっとみる »</a>
 </section>
 
+<% end %>
 
 
 
