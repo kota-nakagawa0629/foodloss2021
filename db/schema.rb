@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_25_122227) do
+ActiveRecord::Schema.define(version: 2021_05_09_042926) do
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "address"
+    t.string "content"
+    t.string "price"
+    t.string "photo"
+    t.string "stock"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "trades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_trades_on_item_id"
+    t.index ["user_id", "item_id"], name: "index_trades_on_user_id_and_item_id", unique: true
+    t.index ["user_id"], name: "index_trades_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "category"
+    t.integer "category", default: 0, null: false
     t.string "name"
     t.string "address"
     t.string "email"
@@ -22,4 +45,7 @@ ActiveRecord::Schema.define(version: 2021_04_25_122227) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "items", "users"
+  add_foreign_key "trades", "items"
+  add_foreign_key "trades", "users"
 end

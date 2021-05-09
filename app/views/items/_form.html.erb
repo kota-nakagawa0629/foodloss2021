@@ -1,0 +1,33 @@
+<%= form_with(model: @item, local: true) do |f| %>
+        <div class="form-group">
+          タイトル
+          <%= f.text_area :title, class: 'form-control', rows: 5 %>
+        </div>
+        <div class="form-group">
+          所在地
+          <%= f.text_area :address, class: 'form-control', rows: 5 %>
+        </div>
+        <div class="form-group">
+          数量
+          <%= f.text_area :stock, class: 'form-control', rows: 5 %>
+          個
+        </div>
+        <div class="form-group">
+          価格
+          <%= f.text_area :price, class: 'form-control', rows: 5 %>
+          円
+        </div>
+        <div class="form-group">
+          内容
+          <%= f.text_area :content, class: 'form-control', rows: 5 %>
+        </div>
+        
+        <div class="field">
+          画像
+          <%= f.label :photo %>
+          <%= f.file_field :photo %>
+        </div>
+
+        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+<% end %>
+

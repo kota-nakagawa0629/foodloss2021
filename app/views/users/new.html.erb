@@ -8,7 +8,12 @@
     <%= form_with(model: @user, local: true) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
       
-      
+      <div class="form-group">
+       <%= f.radio_button :category, :user %>
+       <%= f.label :category, "user", {value: :user, style: "display: inline-block;"} %>
+       <%= f.radio_button :category, :shop %>
+       <%= f.label :category, "shop", {value: :shop, style: "display: inline-block;"} %>
+      </div>
       
       <div class="form-group">
         <%= f.label :name, 'Name' %>

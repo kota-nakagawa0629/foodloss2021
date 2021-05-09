@@ -1,0 +1,164 @@
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% else %>
+
+<section id="top">
+  <div class="jumbotron text-center">
+      <div class="container">
+        <h1 style="color: #ffffff";>お店の方へ</h1>
+      </div>
+    </div>
+</section>
+
+<section id="use">
+  <div class="text-left">
+    <h2>使い方</h2>
+<div class="card-deck">
+  <div class="card" style="width:18rem">
+    <%= image_tag 'use1.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">ロス発生の危機</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">商品が売れ残りそうでロスが発生しそうです。</p>
+  </div>
+</div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use2.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">NO!Food Lossに掲載</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">商品をサイトに掲載します。</p>
+  </div>
+  </div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use3.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">食べての登場</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">欲しい！ひとが現れます。</p>
+  </div>
+  </div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use4.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">お店で受け渡し</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">食品ロスが削減できました！</p>
+  </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+<section id="case">
+    <div class="center jumbotron">
+  <div class="text-left">
+    <h2>こんなときに使ってください</h2>
+<div class="card-deck">
+  <div class="card" style="width:18rem">
+    <%= image_tag 'use1.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">客足が振るわない</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">予想外の天気やイベントで、来店予測を読み違えてしまった…
+    あまってしまいそうなお弁当やパンの売り切りにご活用ください！</p>
+  </div>
+</div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use2.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">予約のドタキャンがでてしまった</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">たくさん仕込んだのに、お客さんが現れなかった…
+    ユーザーに助けを求めてみてください！</p>
+  </div>
+  </div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use3.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">「ワケあり」の商品に</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">味や品質には問題ないけれど、少し見た目が悪くなってしまった…
+    不慮のハネモノや、試作品など、きっと理解のあるユーザーが食べてくれます！</p>
+  </div>
+  </div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use4.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">もったいない「端材」を活用</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">食材のいつもは捨ててしまっている部分、一手間加えれば売れるかも？
+    オリジナルの商品として出品してみてください！</p>
+  </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="benefits">
+  <div class="text-left">
+    <h2>メリット</h2>
+<div class="card-deck">
+  <div class="card" style="width:18rem">
+    <%= image_tag 'use1.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">ロスを減らして利益増！</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">これまで捨ててしまっていた食品を、追加の利益に転換することができます。
+    ゴミの処理費用も節約できるので、ダブルでお得！</p>
+  </div>
+</div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use2.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">エコなお店として認知向上！</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">食品ロスや二酸化炭素排出の削減に貢献できます。
+    環境配慮型のお店としてアピールできます。</p>
+  </div>
+  </div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use3.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">新規顧客につながる！</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">新しいお客様にお店を発見してもらえます。
+    商品がおいしければ、通常の来店にもつながるかも！？</p>
+  </div>
+  </div>
+
+  <div class="card" style="width:18rem">
+  <%= image_tag 'use4.png', :size => '80x80' %>
+  <div class="card-body">
+    <h5 class="card-title">従業員満足度UP!</h5>
+    <h6 class="card-subtitle text-muted">Food Loss</h6>
+    <p class="card-text">商品を捨てるのは、従業員にとって大きなストレス。
+    捨てる量を減らし、エコに貢献することで従業員の離職も抑えることができます。</p>
+  </div>
+  </div>
+</div>
+</section>
+
+
+<div class="text-center">
+ <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
+ <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-primary' %>
+</div>
+
+
+
+
+
+
+<% end %>

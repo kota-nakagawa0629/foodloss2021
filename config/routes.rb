@@ -6,5 +6,14 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   get 'signup', to: 'users#new'
-  resources :users, only: [:index, :show, :create]
+  
+  resources :users, only: [:index, :show, :create] do
+    member do
+      get :likes
+    end
+  end
+  resources :shop_join, only: [:index]
+  resources :items, only: [:index, :show, :new, :create, :destroy]
+  resources :trades, only: [:create, :destroy]
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

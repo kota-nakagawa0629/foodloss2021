@@ -1,0 +1,11 @@
+<h1>id: <%= @item.id %> の商品詳細ページ</h1>
+        <div class="card" style="width:18rem">
+        <%= image_tag @item.photo.url if @item.photo? %>
+        <div class="card-body">
+          <h5 class="card-title"><%= @item.title %></h5>
+          <h6 class="card-subtitle text-muted"><%= @item.address %></h6>
+          <p class="card-text"><%= @item.stock %>個<br>&yen;<%= @item.price %></p>
+          <p class="text-muted"><%= @item.content %></p>
+          
+        </div>
+        </div>

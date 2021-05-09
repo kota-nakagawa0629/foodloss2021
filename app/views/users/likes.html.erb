@@ -16,6 +16,7 @@
       <li class="nav-item"><a href="<%= likes_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(likes_user_path(@user)) %>">購入希望一覧  <span class="badge badge-secondary"><%= @count_likes %></span></a></li>
       <li class="nav-item"><%= link_to '商品一覧', items_path, class: 'nav-link' %></li>
     </ul>
+    <%= render 'items/items', items: @items %>
   </div>
 </div>
 
@@ -35,8 +36,9 @@
   <div class="col-sm-8">
     <ul class="nav nav-tabs nav-justified mb-3">
       <li class="nav-item"><a href="#" class="nav-link">購入希望登録された一覧</a></li>
-      <li class="nav-item"><%= link_to '掲載商品一覧', items_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to '掲載商品一覧（他者が投稿した商品も出てくる、deleteボタンは自分が投稿した商品のみ出る）', items_path, class: 'nav-link' %></li>
     </ul>
+    <%= render 'items/items', items: @items %>
   </div>
 </div>
 

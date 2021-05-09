@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
-      t.string :category
+      t.integer :category, null: false, default: 0
       t.string :name
       t.string :address
       t.string :email
