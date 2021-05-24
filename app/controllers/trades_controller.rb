@@ -12,4 +12,13 @@ class TradesController < ApplicationController
     flash[:success] = 'お気に入りの追加を解除しました。'
     redirect_back(fallback_location: root_path)
   end
+  
+  
+   private
+
+  def require_user_logged_in
+    unless logged_in?
+      redirect_to login_url
+    end
+  end
 end

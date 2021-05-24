@@ -8,4 +8,6 @@ class Item < ApplicationRecord
   validates :stock, presence: true, length: { maximum: 255 }
   
   mount_uploader :photo, PhotoUploader
+
 end
+

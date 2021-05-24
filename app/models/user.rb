@@ -28,4 +28,12 @@ class User < ApplicationRecord
     Item.where(user_id: self.like_ids )
   end
   
+  def liked?(item)
+    self.likeds.include?(item)
+  end
+  
+  def feed_likeds
+    Item.where(user_id: self.liked_ids )
+  end
+  
 end

@@ -19,3 +19,6 @@
     background:url(top.jpg) center no-repeat; background-size: cover;
 }
 
+.card-wrapper {
+  display:flex;
+}

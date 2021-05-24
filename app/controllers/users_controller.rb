@@ -5,9 +5,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @items = @user.items.order(id: :desc).page(params[:page])
-    counts(@user)
+    if @current_user.user?
+      @user = User.find(params[:id])
+      @items = @user.items.order(id: :desc).page(params[:page])
+      counts(@user)
+    end
+    if @current_user.shop?
+      @user = User.find(params[:id])
+      @items = Item.where(user_id: current_user.id)
+      counts(@user)
+    end
   end
 
   def new
@@ -26,11 +33,19 @@ class UsersController < ApplicationController
     end
   end
   
-  def likes
-    @user = User.find(params[:id])
-    @items = @user.likes.page(params[:page])
-    counts(@user)
-  end
+
+    def likes
+      @user = User.find(params[:id])
+      @items = @user.likes.page(params[:page])
+      counts(@user)
+    end
+
+    def likeds
+      @user = User.find(params[:id])
+      @items = current_user.items.select{|item| Trade.where.not(user_id: current_user.id).pluck(:item_id).include?(item.id)} # お気に入り登録された商品のみを抽出する
+      counts(@user) 
+    end
+
 
   private
 

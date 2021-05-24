@@ -1,7 +1,7 @@
 <% if logged_in? && current_user.user? %>
 
 <div class="row">
-<!--マイページの画像はここにあったが削除-->
+
   <div class="col-sm-12">
     <ul class="nav nav-tabs nav-justified mb-3">
       <li class="nav-item"><a href="<%= likes_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(likes_user_path(@user)) %>">購入希望一覧  <span class="badge badge-secondary"><%= @count_likes %></span></a></li>
@@ -14,10 +14,10 @@
 
 <% else %>
 <div class="row">
-  
+ 
   <div class="col-sm-12">
     <ul class="nav nav-tabs nav-justified mb-3">
-      <li class="nav-item"><a href="<%= likes_user_path(@user) %>" class="nav-link">購入希望登録された一覧</a></li>
+      <li class="nav-item"><a href="<%= likeds_user_path(@user) %>" class="nav-link">購入希望登録された一覧</a></li>
       <li class="nav-item"><%= link_to '掲載商品一覧', items_path, class: 'nav-link' %></li>
     </ul>
     <%= render 'items/items', items: @items %>
