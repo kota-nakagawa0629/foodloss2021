@@ -1,7 +1,4 @@
-<% if logged_in? %>
-  <p>ログイン完了ユーザ: <%= current_user.name %></p>
-<% else %>
-
+<!DOCTYPE html>
 <section id="top">
   <div class="jumbotron text-center">
       <div class="container">
@@ -15,7 +12,7 @@
     <h2>使い方</h2>
 <div class="card-deck">
   <div class="card" style="width:18rem">
-    <%= image_tag 'use1.png', :size => '80x80' %>
+    <%= image_tag 'use1.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">ロス発生の危機</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -24,7 +21,7 @@
 </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use2.png', :size => '80x80' %>
+  <%= image_tag 'use2.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">NO!Food Lossに掲載</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -33,7 +30,7 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use3.png', :size => '80x80' %>
+  <%= image_tag 'use3.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">食べての登場</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -42,7 +39,7 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use4.png', :size => '80x80' %>
+  <%= image_tag 'use4.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">お店で受け渡し</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -62,7 +59,7 @@
     <h2>こんなときに使ってください</h2>
 <div class="card-deck">
   <div class="card" style="width:18rem">
-    <%= image_tag 'use1.png', :size => '80x80' %>
+    <%= image_tag 'use1.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">客足が振るわない</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -72,7 +69,7 @@
 </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use2.png', :size => '80x80' %>
+  <%= image_tag 'use2.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">予約のドタキャンがでてしまった</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -82,7 +79,7 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use3.png', :size => '80x80' %>
+  <%= image_tag 'use3.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">「ワケあり」の商品に</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -92,7 +89,7 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use4.png', :size => '80x80' %>
+  <%= image_tag 'use4.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">もったいない「端材」を活用</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -109,7 +106,7 @@
     <h2>メリット</h2>
 <div class="card-deck">
   <div class="card" style="width:18rem">
-    <%= image_tag 'use1.png', :size => '80x80' %>
+    <%= image_tag 'use1.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">ロスを減らして利益増！</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -119,7 +116,7 @@
 </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use2.png', :size => '80x80' %>
+  <%= image_tag 'use2.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">エコなお店として認知向上！</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -129,7 +126,7 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use3.png', :size => '80x80' %>
+  <%= image_tag 'use3.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">新規顧客につながる！</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -139,7 +136,7 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use4.png', :size => '80x80' %>
+  <%= image_tag 'use4.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">従業員満足度UP!</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -156,9 +153,4 @@
  <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-primary' %>
 </div>
 
-
-
-
-
-
-<% end %>
+</html>

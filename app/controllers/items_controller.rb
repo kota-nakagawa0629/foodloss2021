@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :correct_user, only: [:destroy]
   
   def index
-    if current_user.shop?
+    if current_user.present? && current_user.shop?
       @items = current_user.items
     else
       @items = Item.order(id: :desc).page(params[:page])

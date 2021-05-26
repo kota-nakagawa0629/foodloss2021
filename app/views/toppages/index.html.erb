@@ -1,11 +1,9 @@
-<% if logged_in? %>
-  <p>ログイン完了ユーザ: <%= current_user.name %></p>
-<% else %>
+<!DOCTYPE html>
 
 <section id="top">
   <div class="jumbotron text-center">
       <div class="container">
-        <h1 style="color: #ffffff";>Welcome to the NO! Food Loss</h1>
+        <h1 style="color: #ffffff" ;>Welcome to the NO! Food Loss</h1>
         『最後まで食べ切る』を応援する社会派サービス
         <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
         <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a>-->
@@ -30,7 +28,7 @@
     <h2>使い方</h2>
 <div class="card-deck">
   <div class="card" style="width:18rem">
-    <%= image_tag 'use1.png', :size => '80x80' %>
+    <%= image_tag 'use1.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">お店を見つける</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -39,7 +37,7 @@
 </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use2.png', :size => '80x80' %>
+  <%= image_tag 'use2.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">購入希望を登録</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -48,7 +46,7 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use3.png', :size => '80x80' %>
+  <%= image_tag 'use3.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">お店に行く</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -57,13 +55,14 @@
   </div>
 
   <div class="card" style="width:18rem">
-  <%= image_tag 'use4.png', :size => '80x80' %>
+  <%= image_tag 'use4.png', :alt => '', :size => '80x80' %>
   <div class="card-body">
     <h5 class="card-title">フードロスの削減！</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
     <p class="card-text">おいしい食事を持ち帰って楽しみましょう。</p>
   </div>
   </div>
+</div>
 </div>
 </section>
 
@@ -76,9 +75,10 @@
 <%= render 'items/items', items: @items %>
 
 <a class="btn btn-primary btn-lg" href="/items" role="button">もっとみる »</a>
+</div>
 </section>
 
-<% end %>
 
+</html>
 
 
