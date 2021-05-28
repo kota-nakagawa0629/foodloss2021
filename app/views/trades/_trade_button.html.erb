@@ -1,9 +1,11 @@
+  
   <% if current_user.like?(item) %>
   <%= form_with(model: current_user.trades.find_by(item_id: item.id), local: true, class: "d-inline", method: :delete) do |f| %>
   
       
       
-      <%= hidden_field_tag :trades_id, "@item_id" , id: "item_id_#{item.id}" %>
+     <%= hidden_field_tag :item_id, item.id %> 
+
       
       
       
@@ -14,8 +16,7 @@
   
       
       
-      <%= hidden_field_tag :trades_id, "@item_id" , id: "item_id_#{item.id}" %>
-      
+      <%= hidden_field_tag :item_id, item.id %>
       
       
       

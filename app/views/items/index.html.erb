@@ -8,7 +8,7 @@
         <div class="media-body">
         <%= link_to item.user.name, user_path(item.user) %> <span class="text-muted">posted at <%= item.created_at %></span>
           <div class="card" style="width:18rem">
-          <%= image_tag item.photo.url, size: '286x220' if item.photo? %>
+          <%= image_tag item.photo.url, :alt => '', size: '286x220' if item.photo? %>
             <div class="card-body">
               <h5 class="card-title"><%= item.title %></h5>
               <h6 class="card-subtitle text-muted"><%= item.address %></h6>

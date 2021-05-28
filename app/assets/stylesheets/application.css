@@ -15,10 +15,34 @@
  */
  
  
-#top .jumbotron {
-    background:url(top.jpg) center no-repeat; background-size: cover;
-}
+/*#top .jumbotron {*/
+    /*background:url(top.jpg) center no-repeat; background-size: cover;*/
+/*    background:url(top-pic.jpg) center no-repeat; background-size: cover;*/
+/*}*/
 
-.card-wrapper {
-  display:flex;
+
+.jumbotron-extend {
+    height: 100vh;
+    min-height: 350px;
+    margin-bottom: 60px;
+    background: url(top-pic.jpg) no-repeat center center;
+    background-size: cover;
+}
+.jumbotron-container {
+    position: relative;
+    top: 60%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transform: translateX(20%);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.site-name {
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #000;
 }

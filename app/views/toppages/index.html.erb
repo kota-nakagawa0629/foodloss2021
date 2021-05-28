@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-
 <section id="top">
-  <div class="jumbotron text-center">
-      <div class="container">
-        <h1 style="color: #ffffff" ;>Welcome to the NO! Food Loss</h1>
-        『最後まで食べ切る』を応援する社会派サービス
-        <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
-        <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a>-->
-      </div>
+ <% if logged_in? %>
+
+<div class="jumbotron jumbotron-extend">
+    <div class="container-fluid jumbotron-container">
+        <h1 class="site-name">Welcome to the NO! Food Loss</h1>
+        <p>『最後まで食べ切る』を応援する社会派サービス</p>
     </div>
+</div>
+
+<% else %>
+
+<div class="jumbotron jumbotron-extend">
+    <div class="container-fluid jumbotron-container">
+        <h1 class="site-name">Welcome to the NO! Food Loss</h1>
+        <p>『最後まで食べ切る』を応援する社会派サービス</p>
+        <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+</div>
+<% end %>
 </section>
 
 
@@ -24,6 +33,7 @@
 </section>
 
 <section id="use">
+  <div class="center jumbotron">
   <div class="text-left">
     <h2>使い方</h2>
 <div class="card-deck">
@@ -64,6 +74,7 @@
   </div>
 </div>
 </div>
+</div>
 </section>
 
 <section id="items">
@@ -77,8 +88,5 @@
 <a class="btn btn-primary btn-lg" href="/items" role="button">もっとみる »</a>
 </div>
 </section>
-
-
-</html>
 
 

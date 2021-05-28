@@ -22,11 +22,11 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
     if @item.save
       flash[:success] = '商品を投稿しました。'
-      redirect_to root_url
+      redirect_to @item
     else
       @items = current_user.items.order(id: :desc).page(params[:page])
       flash.now[:danger] = '商品の投稿に失敗しました。'
-      render 'toppages/index'
+      render :new
     end
   end
 
