@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show, :likes]
-  before_action :correct_user, only: [:likes]
+  before_action :require_user_logged_in, only: [:index, :show, :likes, :likeds]
+  before_action :correct_user, only: [:likes, :likeds]
   def index
     @users = User.order(id: :desc).page(params[:page]).per(25)
   end
@@ -59,9 +59,10 @@ class UsersController < ApplicationController
   def correct_user
       @user = User.find(params[:id])
       unless @user == current_user
-      redirect_to "/users/#{@user.id}"
+      redirect_to "/users/#{current_user.id}"
       end
   end
+
 
 end
 
