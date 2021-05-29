@@ -9,7 +9,7 @@
       
       
       
-      <%= f.submit 'Unfavorite', class: 'btn btn-danger btn-sm' %>
+      <%= f.submit '購入希望削除', class: 'btn btn-danger btn-sm' %>
     <% end %>
   <% else %>
     <%= form_with(model: current_user.trades.build, local: true, class: "d-inline", method: :post) do |f| %>
@@ -20,6 +20,6 @@
       
       
       
-      <%= f.submit 'Favorite', class: 'btn btn-primary btn-sm' %>
+      <%= f.submit '購入希望追加', class: 'btn btn-primary btn-sm' %>
     <% end %>
   <% end %>

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show, :likes]
+  before_action :correct_user, only: [:likes]
   def index
     @users = User.order(id: :desc).page(params[:page]).per(25)
   end
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
       counts(@user)
     end
   end
+
 
   def new
      @user = User.new
@@ -40,6 +42,7 @@ class UsersController < ApplicationController
       counts(@user)
     end
 
+
     def likeds
       @user = User.find(params[:id])
       @items = current_user.items.select{|item| Trade.where.not(user_id: current_user.id).pluck(:item_id).include?(item.id)} # お気に入り登録された商品のみを抽出する
@@ -52,4 +55,13 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:category, :name, :address, :email, :password, :password_confirmation)
   end
+
+  def correct_user
+      @user = User.find(params[:id])
+      unless @user == current_user
+      redirect_to "/users/#{@user.id}"
+      end
+  end
+
 end
+
