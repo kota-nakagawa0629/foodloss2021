@@ -33,16 +33,12 @@
               <% end %>
               
         <% else %>
-        <!--お店の方はこちら　以外のページのとき-->
-        <li class="nav-item"><a href="#about" class="nav-link">概要</a></li>
-        <li class="nav-item"><a href="#use" class="nav-link">使い方</a></li>
+        <li class="nav-item"><%= link_to '概要', root_path(anchor: 'about'), class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to '使い方', root_path(anchor: 'use'), class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to '商品一覧', items_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'ログイン', login_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to '会員登録', signup_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'お店の方はこちら', shop_join_index_path, class: 'nav-link' %></li>
-        
-        <!--お店の方はこちら　のとき　/shop_joinを見ているとき-->
-        <!--ナビが変わる-->
         <% end %>
       </ul>
     </div>

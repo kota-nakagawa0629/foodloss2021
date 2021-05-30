@@ -3,10 +3,10 @@
         <div class="card" style="width:18rem">
         <%= image_tag @item.photo.url, :alt => '' if @item.photo? %>
         <div class="card-body">
-          <h5 class="card-title"><%= @item.title %></h5>
-          <h6 class="card-subtitle text-muted"><%= @item.address %></h6>
+          <h5 class="card-title"><%= safe_join(@item.title.split("\n"),tag(:br)) %></h5>
+          <h6 class="card-subtitle text-muted"><%= safe_join(@item.address.split("\n"),tag(:br)) %></h6>
           <p class="card-text"><%= @item.stock %>個<br>&yen;<%= @item.price %></p>
-          <p class="text-muted"><%= @item.content %></p>
+          <p class="text-muted"><%= safe_join(@item.content.split("\n"),tag(:br)) %></p>
           
         </div>
         </div>
