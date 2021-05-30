@@ -3,8 +3,10 @@
 
 <div class="jumbotron jumbotron-extend">
     <div class="container-fluid jumbotron-container">
+      <div class="text-center">
         <h1 class="site-name">Welcome to the NO! Food Loss</h1>
         <p>『最後まで食べ切る』を応援する社会派サービス</p>
+        </div>
     </div>
 </div>
 
@@ -12,9 +14,11 @@
 
 <div class="jumbotron jumbotron-extend">
     <div class="container-fluid jumbotron-container">
+      <div class="text-center">
         <h1 class="site-name">Welcome to the NO! Food Loss</h1>
         <p>『最後まで食べ切る』を応援する社会派サービス</p>
         <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
+        </div>
     </div>
 </div>
 <% end %>
@@ -38,7 +42,9 @@
     <h2>使い方</h2>
 <div class="card-deck">
   <div class="card" style="width:18rem">
+    <div class="text-center">
     <%= image_tag 'use1.png', :alt => '', :size => '80x80' %>
+    </div>
   <div class="card-body">
     <h5 class="card-title">お店を見つける</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -47,7 +53,9 @@
 </div>
 
   <div class="card" style="width:18rem">
+    <div class="text-center">
   <%= image_tag 'use2.png', :alt => '', :size => '80x80' %>
+  </div>
   <div class="card-body">
     <h5 class="card-title">購入希望を登録</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -56,7 +64,9 @@
   </div>
 
   <div class="card" style="width:18rem">
+    <div class="text-center">
   <%= image_tag 'use3.png', :alt => '', :size => '80x80' %>
+  </div>
   <div class="card-body">
     <h5 class="card-title">お店に行く</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -65,7 +75,9 @@
   </div>
 
   <div class="card" style="width:18rem">
+    <div class="text-center">
   <%= image_tag 'use4.png', :alt => '', :size => '80x80' %>
+  </div>
   <div class="card-body">
     <h5 class="card-title">フードロスの削減！</h5>
     <h6 class="card-subtitle text-muted">Food Loss</h6>
@@ -85,7 +97,9 @@
 
 <%= render 'items/items', items: @items %>
 
+<div class="text-center">
 <a class="btn btn-primary btn-lg" href="/items" role="button">もっとみる »</a>
+</div>
 </div>
 </section>
 

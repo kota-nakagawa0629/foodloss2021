@@ -1,4 +1,4 @@
-<h1>id: <%= @item.id %> の商品詳細ページ</h1>
+<h1>商品詳細</h1>
 
         <div class="card" style="width:18rem">
         <%= image_tag @item.photo.url, :alt => '' if @item.photo? %>
@@ -10,3 +10,6 @@
           
         </div>
         </div>
+<div class="text-center">
+<%= link_to '一覧に戻る', items_path %>
+</div>

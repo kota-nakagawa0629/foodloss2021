@@ -34,7 +34,7 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    transform: translateX(20%);
+    /*transform: translateX(20%);*/
     padding-left: 30px;
     padding-right: 30px;
 }
